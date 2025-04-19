@@ -1,4 +1,3 @@
-// Deployment test: 2025-04-19
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -26,9 +25,11 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!');
 });
 
+// Server configuration
 const PORT = process.env.PORT || 5000;
 const HOST = '0.0.0.0';
 
+// Start server
 app.listen(PORT, HOST, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);  // Note the backticks (`) not quotes
 });
